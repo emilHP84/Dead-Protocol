@@ -42,4 +42,8 @@ public class MenuUI : MonoBehaviour {
         canvasSettingUI.DOFade(0, fadeTime);
     }
 
+    public void Quit() {
+        Application.Quit();
+    }
+
 }
