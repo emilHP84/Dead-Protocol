@@ -6,7 +6,9 @@ using UnityEngine;
 public class ParameterPartie : ScriptableObject
 {
    [Header("paramètre joueurs")] 
-   public float basicSpeed;
-
    public int basicLife;
+   public int basicEndurance;
+   public float basicSpeed;
+   public int basicDamage;
+   public int basicResistance;
 }

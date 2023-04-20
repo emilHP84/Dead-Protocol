@@ -12,7 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/UI/PlayMenu/CountryChoose.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../RusHourglass/Assets/Emilien/Script/mouvement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RusHourglass/Assets/Emilien/Script/ProceduralGeneration.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -104,7 +104,8 @@
       <workItem from="1680877477133" duration="1774000" />
       <workItem from="1681803227578" duration="73000" />
       <workItem from="1681803373990" duration="5315000" />
-      <workItem from="1681814088210" duration="1319000" />
+      <workItem from="1681814088210" duration="1938000" />
+      <workItem from="1681978595557" duration="586000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,6 @@ public class CountryChoose : MonoBehaviour {
     private void Start() {
         texting.text = " ";
     }
-
     public void Japon() {
         texting.text = "pays insulaire de l'Asie de l'Est, le Japon est un pays bien dévellopé sur des iles volcanique, souvent pris en proie par de violent séisme ";
     }
