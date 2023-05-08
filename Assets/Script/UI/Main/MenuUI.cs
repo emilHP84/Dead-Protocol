@@ -61,5 +61,5 @@ public class MenuUI : MonoBehaviour {
     public void Quit() {
         Application.Quit();
     }
-
+    
 }
