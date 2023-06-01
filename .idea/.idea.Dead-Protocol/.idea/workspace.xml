@@ -12,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/UI/PlayMenu/CountryChoose.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/ertyui.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -25,7 +24,6 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -108,12 +106,20 @@
       <workItem from="1681978595557" duration="586000" />
       <workItem from="1683461452722" duration="8073000" />
       <workItem from="1683542346414" duration="5341000" />
+      <workItem from="1683570397408" duration="1682000" />
+      <workItem from="1683614448612" duration="1511000" />
+      <workItem from="1683628285658" duration="3234000" />
+      <workItem from="1683639996555" duration="767000" />
+      <workItem from="1683640789705" duration="163000" />
+      <workItem from="1683714626236" duration="330000" />
+      <workItem from="1683724858300" duration="1196000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
