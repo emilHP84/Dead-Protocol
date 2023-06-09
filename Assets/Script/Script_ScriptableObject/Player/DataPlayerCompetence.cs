@@ -15,7 +15,7 @@ public class DataPlayerCompetence : ScriptableObject
     public int vitality = 5;
     public int strengh = 5;
     public int endurance = 5;
-    public int speed = 5;
+    public float speed = 5;
     
     [Header("Compétence Primaire")] 
     public int agriculture;

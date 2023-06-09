@@ -11,6 +11,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/UI/PlayMenu/CountryChoose.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -113,6 +115,12 @@
       <workItem from="1683640789705" duration="163000" />
       <workItem from="1683714626236" duration="330000" />
       <workItem from="1683724858300" duration="1196000" />
+      <workItem from="1685818016380" duration="1193000" />
+      <workItem from="1685895614475" duration="4569000" />
+      <workItem from="1686058851219" duration="3863000" />
+      <workItem from="1686174487218" duration="625000" />
+      <workItem from="1686233682523" duration="9370000" />
+      <workItem from="1686313421772" duration="3360000" />
     </task>
     <servers />
   </component>
