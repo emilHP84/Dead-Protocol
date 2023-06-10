@@ -5,8 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour {
     public DataPlayerCompetence dataPlayerCompetence;
 
-    [Header("vitesse déplacemnt")] 
-    
+    [Header("vitesse déplacemnt")]
     public float run;
     public float snick;
     public float walk;
