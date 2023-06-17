@@ -5,17 +5,16 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour {
     public DataPlayerCompetence dataPlayerCompetence;
 
-    [Header("vitesse déplacemnt")]
+    [Header("Player Transform")]
+    public Transform PlayerTransform;
+
+    [Header("vitesse déplacement")]
     public float run;
     public float snick;
     public float walk;
     
     void Start() {
         CalculCompétence();
-    }
-    
-    void Update() {
-        
     }
 
     void CalculCompétence() {
