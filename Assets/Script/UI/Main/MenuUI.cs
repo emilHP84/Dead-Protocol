@@ -28,7 +28,7 @@ public class MenuUI : MonoBehaviour {
     }
 
     public void SwitchToPlay() {
-        MainUi.DOAnchorPos(new Vector2(-300, 0), moveTime, false); //.SetEase(Ease.OutElastic);
+        MainUi.DOAnchorPos(new Vector2(-300, 0), moveTime, false);
         canvasMainUI.DOFade(0, fadeTime);
         
         MenuPlay.transform.DOScale(1, moveTime);
@@ -37,7 +37,7 @@ public class MenuUI : MonoBehaviour {
     }
     
     public void SwitchToSetting() {
-        MainUi.DOAnchorPos(new Vector2(-300, 0), moveTime, false); //.SetEase(Ease.OutElastic);
+        MainUi.DOAnchorPos(new Vector2(-300, 0), moveTime, false);
         canvasMainUI.DOFade(0, fadeTime);
         
         MenuSetting.transform.DOScale(1, moveTime);
@@ -46,7 +46,7 @@ public class MenuUI : MonoBehaviour {
     }
 
     public void SwitchToMainUI() {
-        MainUi.DOAnchorPos(new Vector2(0, 0), moveTime, false); //.SetEase(Ease.OutElastic);
+        MainUi.DOAnchorPos(new Vector2(0, 0), moveTime, false);
         canvasMainUI.DOFade(1, fadeTime);
 
         MenuSetting.transform.DOScale(0.75f, moveTime);

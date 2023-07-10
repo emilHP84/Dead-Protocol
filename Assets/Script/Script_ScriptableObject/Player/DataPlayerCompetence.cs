@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DataPlayerCompétence", menuName = "DataPlayerCompétence", order = 1)]
-public class DataPlayerCompetence : ScriptableObject
-{
+public class DataPlayerCompetence : ScriptableObject {
+    
     [Header("paramètre joueurs")] 
     public int basicLife = 100;
     public int basicEndurance = 100; 

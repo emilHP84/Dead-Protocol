@@ -2,25 +2,38 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class XPSystem : MonoBehaviour
-{
-    public DataPlayerXP _playerXP ;
-    public DataPlayerCompetence _playerCompetence;
+public class XPSystem : MonoBehaviour { 
+    private float timeEndu, timeSpeed;
+    public float enduranceTimeDelay;
+    
+    public DataPlayerXP dataPlayerXp ;
+    public DataPlayerCompetence dataPlayerCompetence;
 
     private float time;
-    [SerializeField] private float dailyXpTime = 3;
-    [SerializeField] private float xpAmmount;
 
     public void Start() {
         time = 0;
     }
 
     void Update() {
-        time += Time.deltaTime;
-        if (time >= dailyXpTime) {
-            _playerXP.agricultureActualXP += xpAmmount;
-            time = 0;
+        timeEndu += Time.deltaTime;
+        timeSpeed += Time.deltaTime;
+    }
+
+    public void xpSpeed() {
+        if (timeSpeed >= 1) {
+            dataPlayerXp.speedActualXP += 0.01f;
+            timeSpeed = 0;
+        }
+    }
+
+    public void xpEndurance() {
+        if (timeEndu >= enduranceTimeDelay) {
+            dataPlayerCompetence.basicEndurance -= 1;
+            dataPlayerXp.enduranceActualXP += 0.01f;
+            timeEndu = 0;
         }
     }
 }

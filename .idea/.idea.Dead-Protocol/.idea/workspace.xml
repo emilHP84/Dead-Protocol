@@ -11,10 +11,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Item &amp; Collectible/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Item &amp; Collectible/PickupItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WeaponSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerCameraModifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerRegen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerUsing.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Script_ScriptableObject/General_Partie/DataBodyType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/UI/PlayMenu/CountryChoose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../RusHourglass/Assets/Emilien/A.B_Script/GamePlay/ModuleManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,6 +55,14 @@
   }
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Build\Dead Protocol.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\ehp84\Desktop\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\e.hugly\Desktop\LOCAL CHANGE\Dead-Protocol&quot; -debugCodeOptimization" />
@@ -130,6 +147,23 @@
       <workItem from="1686941607776" duration="838000" />
       <workItem from="1686984089867" duration="1711000" />
       <workItem from="1687014239955" duration="2298000" />
+      <workItem from="1687110200476" duration="3143000" />
+      <workItem from="1687185038203" duration="4800000" />
+      <workItem from="1687270637937" duration="495000" />
+      <workItem from="1687282264735" duration="10280000" />
+      <workItem from="1687439081105" duration="21107000" />
+      <workItem from="1687633412807" duration="7784000" />
+      <workItem from="1687959208276" duration="5007000" />
+      <workItem from="1688226491865" duration="1900000" />
+      <workItem from="1688232191440" duration="4821000" />
+      <workItem from="1688292389132" duration="10894000" />
+      <workItem from="1688379405655" duration="7625000" />
+      <workItem from="1688647818223" duration="8305000" />
+      <workItem from="1688718126708" duration="583000" />
+      <workItem from="1688718726883" duration="5823000" />
+      <workItem from="1688824603429" duration="7590000" />
+      <workItem from="1688908995661" duration="11007000" />
+      <workItem from="1688981737970" duration="3119000" />
     </task>
     <servers />
   </component>

@@ -9,5 +9,4 @@ public static class WorldManager {
     public  static float timeSpawnning;
     
     public static float gravity = -9.81f;
-    
 }

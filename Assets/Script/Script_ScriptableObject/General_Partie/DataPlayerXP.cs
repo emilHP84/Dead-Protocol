@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "DataPlayerXP", menuName = "DataPlayerXP", order = 2)]
-public class DataPlayerXP : ScriptableObject
-{
+public class DataPlayerXP : ScriptableObject {
+    
     [Header("XP Actuel des Compétence Physique")] 
     public float vitalityActualXP;
     public float strenghActualXP;

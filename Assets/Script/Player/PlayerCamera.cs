@@ -4,19 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCamera : MonoBehaviour {
-    public PlayerManager _PlayerManager;
 
-    public float rotationSpeed = 2.0f;
+    private float RotationSpeedValue = 2.0f;
+    public float rotationSpeed;
 
     private float mouseX;
     private float mouseY;
 
-
-    private void Start() {
-        Cursor.lockState = CursorLockMode.Locked;
+    public void CameraSpeedValue() {
+        rotationSpeed = RotationSpeedValue;
     }
 
-    void Update() {
+    void LateUpdate() {
         mouseX += Input.GetAxis("Mouse X") * rotationSpeed;
         mouseY -= Input.GetAxis("Mouse Y") * rotationSpeed;
         mouseY = Mathf.Clamp(mouseY, -80f, 80f);

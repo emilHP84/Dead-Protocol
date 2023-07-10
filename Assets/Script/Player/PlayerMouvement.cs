@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class PlayerMouvement : MonoBehaviour
-{
-    public PlayerManager _playerManager;
-    public CharacterController controller;
+public class PlayerMouvement : MonoBehaviour {
+    private PlayerManager _playerManager;
+    private CharacterController controller;
+    
     public Camera FollowCamera;
     
     [Header("saut & gravité")]
@@ -15,23 +12,26 @@ public class PlayerMouvement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-
-    [Header("glissade")] 
-    private bool isSlide = false;
     
-    [Header("PositionChildPlayerComponent")]
-    public Vector3 _velocity;
-    public bool _isGrounded;
-    
+    private bool isSlide;
+    private Vector3 _velocity;
+    private bool _isGrounded;
     private float speed;
     private Vector3 cameraRotation;
 
-    private void Start(){
-        speed = _playerManager.walk;
+    private void Awake()
+    {
+        _playerManager = GetComponent<PlayerManager>();
+        controller = gameObject.GetComponent<CharacterController>();
+    }
+
+    private void Start() {
+        speed = PlayerManager.walk;
         isSlide = false;
     }
     
     public void Mouvement() {
+        //mouvement
         _isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         if (_isGrounded && _velocity.y < 0) _velocity.y = -2f;
 
@@ -41,28 +41,33 @@ public class PlayerMouvement : MonoBehaviour
         Vector3 move = Quaternion.Euler(0, FollowCamera.transform.eulerAngles.y, 0) * new Vector3(x,0,z);
         Vector3 moveDirection = move.normalized;
         
-        if (moveDirection != Vector3.zero) {
+        // direction décalé par rapport a la camera
+        if (moveDirection != Vector3.zero && _playerManager.boostedAIM == false) {
             Quaternion desiredRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, _rotationSpeed * Time.deltaTime);
-            
         }
-        
+        else if (_playerManager.boostedAIM) {
+            Quaternion moveAIM = Quaternion.Euler(0, FollowCamera.transform.eulerAngles.y, 0);
+            transform.rotation = Quaternion.Slerp(transform.rotation, moveAIM, _rotationSpeed * Time.deltaTime);
+        }
         controller.Move(move * speed * 3 * Time.deltaTime);
-    }
-    
-    void Update() {
-        Mouvement();
-        // mouvement-vitesse--------------------------------------------------------------------------------------------
-        if (Input.GetButton("LeftShift")) speed = _playerManager.run;
-        else if (Input.GetButton("LeftControl")) speed = _playerManager.snick;
-        else speed = _playerManager.walk;
         
-        // saut---------------------------------------------------------------------------------------------------------
+        //xp system
+        if (move != Vector3.zero && Input.GetButton("LeftShift") && _playerManager.dataPlayerCompetence.basicEndurance > 0) {
+            _playerManager.xpSystem.xpSpeed();
+            _playerManager.xpSystem.xpEndurance();
+        }
+    }
+    void Update() {
+        if(_playerManager.boostedUI == false) Mouvement();
+        if (Input.GetButton("LeftShift") && _playerManager.dataPlayerCompetence.basicEndurance > 0) speed = PlayerManager.run;
+        else if (Input.GetButton("LeftControl")) speed = PlayerManager.snick;
+        else speed = PlayerManager.walk;
+        
         if (Input.GetButtonDown("Jump") && _isGrounded) _velocity.y = Mathf.Sqrt(jumpHeight * -2f * WorldManager.gravity);
         _velocity.y += WorldManager.gravity * Time.deltaTime;
         controller.Move(_velocity * Time.deltaTime);
         
-        //glissade------------------------------------------------------------------------------------------------------
         if (Input.GetButton("LeftShift") && Input.GetButtonDown("LeftControl")) isSlide = true;
         else isSlide = false;
     }
