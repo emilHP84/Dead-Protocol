@@ -12,7 +12,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Item &amp; Collectible/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/Item &amp; Collectible/PickupItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WeaponSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -21,6 +20,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerRegen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerUsing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Script_ScriptableObject/General_Partie/DataBodyType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/CurvingUI/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/UI/PlayMenu/CountryChoose.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../RusHourglass/Assets/Emilien/A.B_Script/GamePlay/ModuleManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -164,6 +164,7 @@
       <workItem from="1688824603429" duration="7590000" />
       <workItem from="1688908995661" duration="11007000" />
       <workItem from="1688981737970" duration="3119000" />
+      <workItem from="1689073339599" duration="2001000" />
     </task>
     <servers />
   </component>
