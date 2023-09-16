@@ -13,6 +13,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Script/Item &amp; Collectible/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/ToolTipSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WeaponSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Manager/WorldManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerCameraModifier.cs" root0="FORCE_HIGHLIGHTING" />
@@ -20,8 +21,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerRegen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Player/PlayerUsing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/Script_ScriptableObject/General_Partie/DataBodyType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/CurvingUI/MeshGenerator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/PlayMenu/CountryChoose.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/InGame/Slot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Script/UI/InGame/UiIventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/UniversalAdditionalCameraData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../RusHourglass/Assets/Emilien/A.B_Script/GamePlay/ModuleManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -165,6 +166,27 @@
       <workItem from="1688908995661" duration="11007000" />
       <workItem from="1688981737970" duration="3119000" />
       <workItem from="1689073339599" duration="2001000" />
+      <workItem from="1690726729988" duration="1704000" />
+      <workItem from="1691682167505" duration="724000" />
+      <workItem from="1692542871791" duration="2115000" />
+      <workItem from="1692700200383" duration="13667000" />
+      <workItem from="1692736492021" duration="3878000" />
+      <workItem from="1692800089205" duration="2184000" />
+      <workItem from="1692881105208" duration="5570000" />
+      <workItem from="1692891322443" duration="895000" />
+      <workItem from="1692912486915" duration="2836000" />
+      <workItem from="1692960376157" duration="1737000" />
+      <workItem from="1692964024811" duration="200000" />
+      <workItem from="1693066588701" duration="4200000" />
+      <workItem from="1693222886217" duration="10222000" />
+      <workItem from="1693322390776" duration="7876000" />
+      <workItem from="1693412202519" duration="17545000" />
+      <workItem from="1694024983511" duration="5620000" />
+      <workItem from="1694384609293" duration="2668000" />
+      <workItem from="1694452005422" duration="6021000" />
+      <workItem from="1694519182179" duration="11107000" />
+      <workItem from="1694611630343" duration="1188000" />
+      <workItem from="1694710925754" duration="4868000" />
     </task>
     <servers />
   </component>
@@ -176,5 +198,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Script/Player/PlayerInventory.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\ehp84\Desktop\Local Change\Dead-Protocol\Assets\Script\Player\PlayerInventory.cs" initialLine="31" containingFunctionPresentation="Method 'RefreshContent'">
+            <startOffsets>
+              <option value="1043" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1044" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

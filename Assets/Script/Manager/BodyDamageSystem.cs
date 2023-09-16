@@ -19,7 +19,6 @@ public class BodyDamageSystem : MonoBehaviour {
         RandomDamage();
         RandomBody();
         bodyDefined.HurtList.Add(damageDefined);
-        Debug.Log("le " + bodyDefined.bodyName + " a une blessure de type: " + damageDefined.name);
     }
  
     private void RandomDamage() { 
