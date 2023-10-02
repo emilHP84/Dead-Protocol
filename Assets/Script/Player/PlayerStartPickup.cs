@@ -26,8 +26,7 @@ public class PlayerStartPickup : MonoBehaviour {
         pickupText.DOScale(0, 0.1f);
     }
 
-    private bool IsPickable() => Physics.Raycast(transform.position, transform.forward, out hit, pickupRange, layerMask) &&
-                                 hit.transform.GetComponent<Item>();
+    private bool IsPickable() => Physics.Raycast(transform.position, transform.forward, out hit, pickupRange, layerMask) &&  hit.transform.GetComponent<Item>();
 
     public void StartPick() {
         if (IsPickable()) {

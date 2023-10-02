@@ -9,6 +9,8 @@ public class UiIventory : MonoBehaviour {
     [Header(" transform Dotween")]
     [SerializeField] private Transform mid, left, right, button;
 
+    private bool inventoryIsOpen;
+
     private bool isActive = false;
     private float scaleValue = 0;
 
@@ -28,16 +30,20 @@ public class UiIventory : MonoBehaviour {
         left.DOScale(scaleValue, 0.2f);
         mid.DOScale(scaleValue, 0.3f);
         right.DOScale(scaleValue, 0.4f);
+        PlayerInventory.instance.CloseActionPanel();
         
         isActive = !isActive;
-        
-        if (scaleValue == 0) yield return new WaitForSeconds(0.4f);
-        InventoryPanel.SetActive(!InventoryPanel.activeSelf);
-
+        if (right.transform.localScale == new Vector3(0,0,0)) CloseInventory();
+        if(isActive)OpenInventory();
         yield return null;
+    }
+
+    public void OpenInventory(){
+        InventoryPanel.SetActive(true);
     }
 
     public void CloseInventory() {
         InventoryPanel.SetActive(false);
+        ToolTipSystem.instance.Hide();
     }
 }

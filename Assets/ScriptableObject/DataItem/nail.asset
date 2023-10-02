@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2aa59ab7f54ac44bcffe25017391a5, type: 3}
   m_Name: nail
   m_EditorClassIdentifier: 
-  typeOfItem: 7
+  typeOfItem: 4
   rarity: 1
+  equipementType: 0
   itemName: nail
   itemDescription: a wrist of nails, useful for manufacturing
   visualItem: {fileID: 0}

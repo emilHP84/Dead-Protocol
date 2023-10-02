@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2aa59ab7f54ac44bcffe25017391a5, type: 3}
   m_Name: scrapMetal
   m_EditorClassIdentifier: 
-  typeOfItem: 7
+  typeOfItem: 4
   rarity: 2
+  equipementType: 0
   itemName: scrap metal
   itemDescription: metal fragments, useful for a wide range of manufacturing
   visualItem: {fileID: 0}

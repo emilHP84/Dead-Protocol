@@ -2,9 +2,12 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class PlayerInventory : MonoBehaviour {
+    [Header("inventory refrences")]
     public static PlayerInventory instance;
+    [SerializeField] private EquipementLibrary equipementLibrary;
     [SerializeField] private List<ItemData> contentInventory = new List<ItemData>();
     [SerializeField] private Transform InventorySlotsParent;
     [SerializeField] private int basicInventorySlot = 24;
@@ -14,6 +17,12 @@ public class PlayerInventory : MonoBehaviour {
     [SerializeField] private GameObject ActionPannel;
     [SerializeField] private GameObject UseButton, EquipButton, DropButton, ScrapButton;
     [SerializeField] private Transform dropPoint;
+
+    [Header("equipement references")]
+    [SerializeField] private GameObject equipementSlot;
+    [SerializeField] private List<ItemData> headEquip = new List<ItemData>();
+    [SerializeField] private List<Image> topEquip = new List<Image>();
+    [SerializeField] private List<Image> bottomEquip = new List<Image>();
     
     private ItemData itemCurrentlySelected;
 
@@ -48,7 +57,6 @@ public class PlayerInventory : MonoBehaviour {
         return basicInventorySlot == contentInventory.Count;
     }
     
-    
 
     public void OpenActionPanel(ItemData item, Vector3 slotPosition) {
         itemCurrentlySelected = item;
@@ -60,23 +68,11 @@ public class PlayerInventory : MonoBehaviour {
                 EquipButton.SetActive(false);
                 break;
             
-            case TypeOfItem.Outfit:
+            case TypeOfItem.equipement:
                 UseButton.SetActive(false);
                 EquipButton.SetActive(true);
                 break;
-            case TypeOfItem.armor:
-                UseButton.SetActive(false);
-                EquipButton.SetActive(true);
-                break;
-            case TypeOfItem.bagpack:
-                UseButton.SetActive(false);
-                EquipButton.SetActive(true);
-                break;
-            case TypeOfItem.MeleeWeapon:
-                UseButton.SetActive(false);
-                EquipButton.SetActive(true);
-                break;
-            case TypeOfItem.RangeWeapon:
+            case TypeOfItem.weapon:
                 UseButton.SetActive(false);
                 EquipButton.SetActive(true);
                 break;
@@ -105,15 +101,19 @@ public class PlayerInventory : MonoBehaviour {
         itemCurrentlySelected = null;
     }
     
-    
-
     public void UseActionButton() {
         
         CloseActionPanel();
     }
 
     public void EquipActionButton() {
-        
+        EquipementLIbraryItem equipementLIbraryItem = equipementLibrary.content.Where(elen => elen.itemData == itemCurrentlySelected).First();
+        if(equipementLIbraryItem != null){
+            Instantiate(equipementLIbraryItem.itemData.prefabItem ,equipementLIbraryItem.itemPrefab.transform);
+            AddContent();
+        }
+        contentInventory.Remove(itemCurrentlySelected);
+        RefreshContent();
         CloseActionPanel();
     }
 
@@ -129,5 +129,14 @@ public class PlayerInventory : MonoBehaviour {
         contentInventory.Remove(itemCurrentlySelected);
         RefreshContent();
         CloseActionPanel();
+    }
+
+    public void AddHeadEquipContent(){
+        itemCurrentlySelected = item;
+        if (item == null) return;
+        
+        
+            
+        
     }
 }

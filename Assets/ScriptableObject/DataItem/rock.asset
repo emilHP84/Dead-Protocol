@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2aa59ab7f54ac44bcffe25017391a5, type: 3}
   m_Name: rock
   m_EditorClassIdentifier: 
-  typeOfItem: 7
+  typeOfItem: 4
   rarity: 1
+  equipementType: 0
   itemName: Rock
   itemDescription: a simple rock, small but solid
   visualItem: {fileID: 21300000, guid: 1a1da36a104725048b8d2388fb8d321d, type: 3}
-  prefabItem: {fileID: 0}
+  prefabItem: {fileID: 6860153980906010188, guid: da4c124fe4ef4074fa8f40bfeb582099,
+    type: 3}
   kilogramme: 0.1

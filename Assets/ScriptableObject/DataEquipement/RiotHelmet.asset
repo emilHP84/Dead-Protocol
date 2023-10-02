@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a2aa59ab7f54ac44bcffe25017391a5, type: 3}
-  m_Name: stick
+  m_Name: RiotHelmet
   m_EditorClassIdentifier: 
-  typeOfItem: 4
-  rarity: 1
-  equipementType: 0
-  itemName: stick
-  itemDescription: a big stick, can be useful
-  visualItem: {fileID: 21300000, guid: f09eae8c0ea04254b90c5386a034a225, type: 3}
+  typeOfItem: 0
+  rarity: 3
+  equipementType: 1
+  itemName: RiotHelmet
+  itemDescription: a helmet from specialForce, extremely resistant from physic attack
+  visualItem: {fileID: 21300000, guid: 65f0e363b74cf5845ab8c3fbc14f39ac, type: 3}
   prefabItem: {fileID: 4182795765173796648, guid: 0700c110ca0c1184d9698b3b998b9798,
     type: 3}
-  kilogramme: 0.08
+  kilogramme: 3
