@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basicLife: 100
   basicEndurance: 100
-  basicHungers: 90
-  basicThurst: 90
+  basicHungers: 100
+  basicThurst: 100
   vitality: 5
   strengh: 5
   endurance: 5

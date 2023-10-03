@@ -5,8 +5,9 @@ using UnityEngine.UI;
 using System.Linq;
 
 public class PlayerInventory : MonoBehaviour {
-    [Header("inventory refrences")]
     public static PlayerInventory instance;
+    
+    [Header("inventory refrences")]
     [SerializeField] private EquipementLibrary equipementLibrary;
     [SerializeField] private List<ItemData> contentInventory = new List<ItemData>();
     [SerializeField] private Transform InventorySlotsParent;
@@ -110,7 +111,7 @@ public class PlayerInventory : MonoBehaviour {
         EquipementLIbraryItem equipementLIbraryItem = equipementLibrary.content.Where(elen => elen.itemData == itemCurrentlySelected).First();
         if(equipementLIbraryItem != null){
             Instantiate(equipementLIbraryItem.itemData.prefabItem ,equipementLIbraryItem.itemPrefab.transform);
-            AddContent();
+            AddHeadEquipContent();
         }
         contentInventory.Remove(itemCurrentlySelected);
         RefreshContent();
@@ -132,11 +133,6 @@ public class PlayerInventory : MonoBehaviour {
     }
 
     public void AddHeadEquipContent(){
-        itemCurrentlySelected = item;
-        if (item == null) return;
-        
-        
-            
         
     }
 }

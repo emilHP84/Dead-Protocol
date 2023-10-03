@@ -5,9 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UiIventory : MonoBehaviour {
+     // partit du script pour l'animation de l'inventaire//
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     [SerializeField] private GameObject InventoryPanel;
+    
     [Header(" transform Dotween")]
-    [SerializeField] private Transform mid, left, right, button;
+    [SerializeField] private GameObject mid, left, right, button;
 
     private bool inventoryIsOpen;
 
@@ -26,10 +30,10 @@ public class UiIventory : MonoBehaviour {
     }
 
     IEnumerator GameUI() {
-        button.DOScale(scaleValue, 0.1f);
-        left.DOScale(scaleValue, 0.2f);
-        mid.DOScale(scaleValue, 0.3f);
-        right.DOScale(scaleValue, 0.4f);
+        button.transform.DOScale(scaleValue, 0.1f);
+        left.transform.DOScale(scaleValue, 0.2f);
+        mid.transform.DOScale(scaleValue, 0.3f);
+        right.transform.DOScale(scaleValue, 0.4f);
         PlayerInventory.instance.CloseActionPanel();
         
         isActive = !isActive;
@@ -46,4 +50,16 @@ public class UiIventory : MonoBehaviour {
         InventoryPanel.SetActive(false);
         ToolTipSystem.instance.Hide();
     }
+
+    // partit du script pour le slider de l'inventaire//
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    [Header("slider for inventory")]
+    [SerializeField] private ScrollRect scrollrect;
+    [SerializeField] private Slider slider;
+
+    /*public void ScrollCheck(){
+        if(scrollrect.){}
+    }*/
+
 }

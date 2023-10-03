@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitalityActualXP: 0
   strenghActualXP: 0
-  enduranceActualXP: 0.08999999
-  speedActualXP: 0.08999999
+  enduranceActualXP: 0
+  speedActualXP: 0
   agricultureActualXP: 0
   artisanActualXP: 0
   "ma\xE7onerieActualXP": 0

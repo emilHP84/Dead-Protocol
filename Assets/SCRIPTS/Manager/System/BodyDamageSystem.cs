@@ -5,9 +5,9 @@ using Random = UnityEngine.Random;
 
 public class BodyDamageSystem : MonoBehaviour {
     [Header("Damage")] 
-    public List<DataDamageType> damageType = new List<DataDamageType>();
+    private List<DataDamageType> damageType = new List<DataDamageType>();
     [Header("BodyPart")] 
-    public List<DataBodyType> bodyType = new List<DataBodyType>();
+    private List<DataBodyType> bodyType = new List<DataBodyType>();
     
     public DataDamageType damageDefined;
     public DataBodyType bodyDefined;
