@@ -21,6 +21,7 @@ public class UiIventory : MonoBehaviour {
     private void Start() {
         PlayerUsing.InventoryInput += UIInventory;
         InventoryPanel.SetActive(false);
+        ScrollCheck();
     }
 
     private void UIInventory() {
@@ -55,11 +56,14 @@ public class UiIventory : MonoBehaviour {
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     [Header("slider for inventory")]
+    [SerializeField] private RectTransform original;
     [SerializeField] private ScrollRect scrollrect;
     [SerializeField] private Slider slider;
 
-    /*public void ScrollCheck(){
-        if(scrollrect.){}
-    }*/
+    public void ScrollCheck(){
+        if(original.transform.position == new Vector3(0,0,0)){
+            Debug.Log("test");
+        }
+    }
 
 }
