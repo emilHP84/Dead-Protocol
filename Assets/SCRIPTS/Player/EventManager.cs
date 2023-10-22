@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerUsing : MonoBehaviour {
+public class EventManager : MonoBehaviour {
     
     [Header("weapon setting")]
     [SerializeField]private KeyCode keyCodeReload;
@@ -21,7 +21,7 @@ public class PlayerUsing : MonoBehaviour {
     public static Action InventoryInput;
     
     private void Update() {
-        if (Input.GetMouseButtonDown(1)) PlayerInventory.instance.CloseActionPanel();
+        if (Input.GetMouseButtonDown(1)) Inventory.instance.CloseActionPanel();
         if (Input.GetKeyDown(keyCodeScope)) ScopeInput?.Invoke();
         if (Input.GetKeyUp(keyCodeScope)) ScopeInput?.Invoke();
         if (Input.GetKeyDown(keyCodeShoot)) ShootInput?.Invoke();

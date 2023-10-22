@@ -12,8 +12,8 @@ public class WeaponSystem : MonoBehaviour
     private float timeSinceLastShoot;
 
     private void Start() {
-        PlayerUsing.ShootInput += Shoot;
-        PlayerUsing.ReloadInput += StartReload;
+        EventManager.ShootInput += Shoot;
+        EventManager.ReloadInput += StartReload;
     }
 
     private void Update() {

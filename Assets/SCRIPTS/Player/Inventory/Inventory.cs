@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
-public class PlayerInventory : MonoBehaviour {
-    public static PlayerInventory instance;
+public class Inventory : MonoBehaviour {
+    public static Inventory instance;
     
     [Header("inventory refrences")]
-    [SerializeField] private EquipementLibrary equipementLibrary;
     [SerializeField] private List<ItemData> contentInventory = new List<ItemData>();
+    [SerializeField] private EquipementLibrary equipementLibrary;
     [SerializeField] private Transform InventorySlotsParent;
     [SerializeField] private int basicInventorySlot = 24;
     [SerializeField] private Sprite emptySlotVisual;
@@ -20,11 +20,13 @@ public class PlayerInventory : MonoBehaviour {
     [SerializeField] private Transform dropPoint;
 
     [Header("equipement references")]
-    [SerializeField] private GameObject equipementSlot;
+    [SerializeField] private List<ItemData> protectionEquip = new List<ItemData>();
+    [SerializeField] private List<ItemData> bottomEquip = new List<ItemData>();
     [SerializeField] private List<ItemData> headEquip = new List<ItemData>();
-    [SerializeField] private List<Image> topEquip = new List<Image>();
-    [SerializeField] private List<Image> bottomEquip = new List<Image>();
-    
+    [SerializeField] private List<ItemData> topEquip = new List<ItemData>();
+    [SerializeField] private Transform headSlotParent, topSlotParent, bottomSlotParent, protectionSlotParent;
+
+
     private ItemData itemCurrentlySelected;
 
     public void Awake() {
@@ -33,6 +35,7 @@ public class PlayerInventory : MonoBehaviour {
     
     public void Start() {
         RefreshContent();
+        RefreshEquipementContent();
         ActionPannel.transform.DOScale(0, 0);
     }
     
@@ -53,7 +56,7 @@ public class PlayerInventory : MonoBehaviour {
                 currentSlot.itemVisual.sprite = contentInventory[i].visualItem;
         }
     }
-
+    
     public bool Isfull() {
         return basicInventorySlot == contentInventory.Count;
     }
@@ -108,15 +111,68 @@ public class PlayerInventory : MonoBehaviour {
     }
 
     public void EquipActionButton() {
-        EquipementLIbraryItem equipementLIbraryItem = equipementLibrary.content.Where(elen => elen.itemData == itemCurrentlySelected).First();
-        if(equipementLIbraryItem != null){
-            Instantiate(equipementLIbraryItem.itemData.prefabItem ,equipementLIbraryItem.itemPrefab.transform);
-            AddHeadEquipContent();
+        if (itemCurrentlySelected != null && itemCurrentlySelected.equipementType != EquipementType.nothing){
+            if(itemCurrentlySelected.equipementType == EquipementType.helmet || itemCurrentlySelected.equipementType == EquipementType.face || itemCurrentlySelected.equipementType == EquipementType.neck || itemCurrentlySelected.equipementType == EquipementType.neckless){
+                headEquip.Add(itemCurrentlySelected);
+                Instantiate(itemCurrentlySelected.prefabItem);
+
+                contentInventory.Remove(itemCurrentlySelected);
+            }
+            if (itemCurrentlySelected.equipementType == EquipementType.shirt || itemCurrentlySelected.equipementType == EquipementType.jacket || itemCurrentlySelected.equipementType == EquipementType.BulletproofVest || itemCurrentlySelected.equipementType == EquipementType.bag)
+            {
+                topEquip.Add(itemCurrentlySelected);
+                Instantiate(itemCurrentlySelected.prefabItem);
+
+                contentInventory.Remove(itemCurrentlySelected);
+            }
+            if (itemCurrentlySelected.equipementType == EquipementType.belt || itemCurrentlySelected.equipementType == EquipementType.olster || itemCurrentlySelected.equipementType == EquipementType.pants || itemCurrentlySelected.equipementType == EquipementType.boots)
+            {
+                bottomEquip.Add(itemCurrentlySelected);
+                Instantiate(itemCurrentlySelected.prefabItem);
+
+                contentInventory.Remove(itemCurrentlySelected);
+            }
+            if (itemCurrentlySelected.equipementType == EquipementType.protection)
+            {
+                protectionEquip.Add(itemCurrentlySelected);
+                Instantiate(itemCurrentlySelected.prefabItem);
+
+                contentInventory.Remove(itemCurrentlySelected);
+            }
         }
         contentInventory.Remove(itemCurrentlySelected);
-        RefreshContent();
+        RefreshEquipementContent();
         CloseActionPanel();
     }
+
+    private void RefreshEquipementContent()
+    {
+        for (int i = 0; i < headEquip.Count; i++)
+        {
+            Slot currentSlot = headSlotParent.GetChild(i).GetComponent<Slot>();
+            currentSlot.item = headEquip[i];
+            currentSlot.itemVisual.sprite = headEquip[i].visualItem;
+        }
+        for (int i = 0; i < topEquip.Count; i++)
+        {
+            Slot currentSlot = topSlotParent.GetChild(i).GetComponent<Slot>();
+            currentSlot.item = topEquip[i];
+            currentSlot.itemVisual.sprite = topEquip[i].visualItem;
+        }
+        for (int i = 0; i < bottomEquip.Count; i++)
+        {
+            Slot currentSlot = bottomSlotParent.GetChild(i).GetComponent<Slot>();
+            currentSlot.item = bottomEquip[i];
+            currentSlot.itemVisual.sprite = bottomEquip[i].visualItem;
+        }
+        for (int i = 0; i < protectionEquip.Count; i++)
+        {
+            Slot currentSlot = protectionSlotParent.GetChild(i).GetComponent<Slot>();
+            currentSlot.item = protectionEquip[i];
+            currentSlot.itemVisual.sprite = protectionEquip[i].visualItem;
+        }
+    }
+
 
     public void DropActionButton() {
         GameObject instantiateditem = Instantiate(itemCurrentlySelected.prefabItem);
@@ -130,9 +186,5 @@ public class PlayerInventory : MonoBehaviour {
         contentInventory.Remove(itemCurrentlySelected);
         RefreshContent();
         CloseActionPanel();
-    }
-
-    public void AddHeadEquipContent(){
-        
     }
 }

@@ -9,10 +9,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
 
-public class PlayerStartPickup : MonoBehaviour {
+public class StartPickup : MonoBehaviour {
     
     // inventory variable
-    public PlayerPickup _PlayerPickup;
+    public Pickup _PlayerPickup;
     [SerializeField]private float pickupRange;
     private RaycastHit hit;
     [SerializeField]private LayerMask layerMask;
@@ -22,7 +22,7 @@ public class PlayerStartPickup : MonoBehaviour {
     [SerializeField]private Text itemName;
     
     private void Start() {
-        PlayerUsing.InteractInput += StartPick;
+        EventManager.InteractInput += StartPick;
         pickupText.DOScale(0, 0.1f);
     }
 

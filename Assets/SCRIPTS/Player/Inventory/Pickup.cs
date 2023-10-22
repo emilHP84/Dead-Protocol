@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
 
-public class PlayerPickup : MonoBehaviour {
-    [SerializeField] private PlayerInventory _playerInventory;
+public class Pickup : MonoBehaviour {
+    [SerializeField] private Inventory _playerInventory;
 
     public void DoPickUp(Item item) {
         if (_playerInventory.Isfull()) return;

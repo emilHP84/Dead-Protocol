@@ -16,6 +16,6 @@ public class ItemData : ScriptableObject
     public float kilogramme;
 }
 public enum TypeOfItem{ equipement, weapon, food, medicine, component, structure};
-public enum EquipementType{nothing, helmet, face, neck, neckless, TShirt, shirt, jacket, BulletproofVest, bag, belt, olster, pants, boots, protection}
+public enum EquipementType{nothing, helmet, face, neck, neckless, shirt, jacket, BulletproofVest, bag, belt, olster, pants, boots, protection}
 public enum Rarity{ worn, common, unusal, rare, epic, legendary}
 

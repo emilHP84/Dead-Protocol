@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMouvement : MonoBehaviour {
+public class MouvementController : MonoBehaviour {
     private PlayerManager _playerManager;
     private CharacterController controller;
     

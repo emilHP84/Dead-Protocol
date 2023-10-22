@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRegen : MonoBehaviour {
+public class Regen : MonoBehaviour {
     private PlayerManager _playerManager;
     public BodyDamageSystem bodyDamageSystem;
 
