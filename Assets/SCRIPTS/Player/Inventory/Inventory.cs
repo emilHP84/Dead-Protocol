@@ -142,6 +142,7 @@ public class Inventory : MonoBehaviour {
         }
         contentInventory.Remove(itemCurrentlySelected);
         RefreshEquipementContent();
+        RefreshContent();
         CloseActionPanel();
     }
 
