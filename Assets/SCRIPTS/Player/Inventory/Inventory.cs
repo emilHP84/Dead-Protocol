@@ -112,26 +112,38 @@ public class Inventory : MonoBehaviour {
 
     public void EquipActionButton() {
         if (itemCurrentlySelected != null && itemCurrentlySelected.equipementType != EquipementType.nothing){
-            if(itemCurrentlySelected.equipementType == EquipementType.helmet || itemCurrentlySelected.equipementType == EquipementType.face || itemCurrentlySelected.equipementType == EquipementType.neck || itemCurrentlySelected.equipementType == EquipementType.neckless){
+
+            if(itemCurrentlySelected.equipementType == EquipementType.helmet 
+                    || itemCurrentlySelected.equipementType == EquipementType.face 
+                        || itemCurrentlySelected.equipementType == EquipementType.neck 
+                            || itemCurrentlySelected.equipementType == EquipementType.neckless){
                 headEquip.Add(itemCurrentlySelected);
                 Instantiate(itemCurrentlySelected.prefabItem);
 
                 contentInventory.Remove(itemCurrentlySelected);
             }
-            if (itemCurrentlySelected.equipementType == EquipementType.shirt || itemCurrentlySelected.equipementType == EquipementType.jacket || itemCurrentlySelected.equipementType == EquipementType.BulletproofVest || itemCurrentlySelected.equipementType == EquipementType.bag)
-            {
+
+            if (itemCurrentlySelected.equipementType == EquipementType.shirt 
+                    || itemCurrentlySelected.equipementType == EquipementType.jacket 
+                        || itemCurrentlySelected.equipementType == EquipementType.BulletproofVest 
+                            || itemCurrentlySelected.equipementType == EquipementType.bag){
                 topEquip.Add(itemCurrentlySelected);
                 Instantiate(itemCurrentlySelected.prefabItem);
 
                 contentInventory.Remove(itemCurrentlySelected);
             }
-            if (itemCurrentlySelected.equipementType == EquipementType.belt || itemCurrentlySelected.equipementType == EquipementType.olster || itemCurrentlySelected.equipementType == EquipementType.pants || itemCurrentlySelected.equipementType == EquipementType.boots)
-            {
+
+            if (itemCurrentlySelected.equipementType == EquipementType.belt 
+                    || itemCurrentlySelected.equipementType == EquipementType.olster 
+                        || itemCurrentlySelected.equipementType == EquipementType.pants 
+                            || itemCurrentlySelected.equipementType == EquipementType.boots){
                 bottomEquip.Add(itemCurrentlySelected);
                 Instantiate(itemCurrentlySelected.prefabItem);
 
                 contentInventory.Remove(itemCurrentlySelected);
             }
+
+
             if (itemCurrentlySelected.equipementType == EquipementType.protection)
             {
                 protectionEquip.Add(itemCurrentlySelected);
