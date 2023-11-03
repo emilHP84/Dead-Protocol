@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Item/New Item")]
 public class ItemData : ScriptableObject{
     public TypeOfItem typeOfItem;
     public Rarity rarity;
-    public EquipementType equipementType;
+    [HideInInspector] public EquipementType equipementType;
     public string itemName;
     public string itemDescription;
     public Sprite visualItem;
@@ -16,8 +18,8 @@ public class ItemData : ScriptableObject{
     public float kilogramme;
 }
 public enum TypeOfItem{ equipement, weapon, food, medicine, component, structure};
-[HideInInspector] public enum EquipementType{nothing, helmet, face, neck, neckless, shirt, jacket, BulletproofVest, bag, belt, olster, pants, boots, protection}
-[HideInInspector] public enum Rarity{ worn, common, unusal, rare, epic, legendary}
+ public enum EquipementType{nothing, helmet, face, neck, neckless, shirt, jacket, BulletproofVest, bag, belt, olster, pants, boots, protection}
+ public enum Rarity{ worn, common, unusal, rare, epic, legendary}
 
 
 
@@ -25,14 +27,16 @@ public enum TypeOfItem{ equipement, weapon, food, medicine, component, structure
 
 
 [CustomEditor(typeof(ItemData))]
-public class ItemdataEditor : Editor { 
+public class ItemDataEditor : Editor { 
     public override void OnInspectorGUI(){
         ItemData item = (ItemData)target;
 
-        if(item.typeOfItem == TypeOfItem.equipement){
-             
+        if (item.typeOfItem == TypeOfItem.equipement){
+            SerializedProperty equipementType = serializedObject.FindProperty("equipementType");
+            EditorGUILayout.PropertyField(equipementType);
         }
 
+        serializedObject.ApplyModifiedProperties();
         base.OnInspectorGUI();
     }
 }
