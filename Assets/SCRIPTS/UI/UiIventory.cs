@@ -30,7 +30,7 @@ public class UiIventory : MonoBehaviour {
         left.transform.DOScale(scaleValue, 0.2f);
         mid.transform.DOScale(scaleValue, 0.3f);
         right.transform.DOScale(scaleValue, 0.4f);
-        Inventory.instance.CloseActionPanel();
+        //Inventory.instance.CloseActionPanel();
         
         isActive = !isActive;
         if (right.transform.localScale == new Vector3(0,0,0)) CloseInventory();
